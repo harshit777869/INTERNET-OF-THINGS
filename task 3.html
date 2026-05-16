@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Security System</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:400px;margin:auto;margin-top:50px;background:#1e1e1e;padding:20px;border-radius:10px;}
+.alert{background:#ff4444;padding:10px;margin-top:10px;border-radius:8px;}
+button{padding:10px;background:#00ff99;border:none;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>Security System</h2>
+
+<button onclick="detect()">Simulate Motion</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+function detect(){
+
+out.innerHTML = `
+<div class="alert">🚨 Motion Detected!</div>
+<div class="alert">📸 Image Captured</div>
+<div class="alert">📱 Alert Sent to Mobile App</div>
+`;
+}
+</script>
+
+</body>
+</html>

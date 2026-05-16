@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Air Quality Monitor</title>
+
+<style>
+body{font-family:Arial;background:#121212;color:white;text-align:center;}
+.box{width:400px;margin:auto;margin-top:50px;background:#1e1e1e;padding:20px;border-radius:10px;}
+.card{background:#2d2d2d;margin:10px;padding:10px;border-radius:8px;}
+.good{color:#00ff99;}
+.bad{color:#ff4444;}
+</style>
+</head>
+<body>
+
+<div class="box">
+
+<h2>Air Quality Monitor</h2>
+
+<button onclick="generate()">Check AQI</button>
+
+<div id="out"></div>
+
+</div>
+
+<script>
+function generate(){
+
+let aqi = Math.floor(Math.random()*300);
+
+let status = "";
+
+if(aqi < 50) status="Good 😊";
+else if(aqi < 150) status="Moderate 😐";
+else status="Poor 😷";
+
+out.innerHTML = `
+<div class="card">AQI Value: ${aqi}</div>
+<div class="card">Status: ${status}</div>
+`;
+}
+</script>
+
+</body>
+</html>
